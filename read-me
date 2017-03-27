@@ -1,0 +1,28 @@
+This is maven project & war file to be deployed on server with http port - 9595
+
+Each given url is mapped with a use case.
+
+a) to create account
+url - http://localhost:9595/shorturl/account -  
+http method - post
+request- json file with accountId and value
+response- json file 
+
+b)to register url using valid created account in step a
+url - http://localhost:9595/shorturl/register -  
+http method - post
+request- Add Basic Authorization string ( username:password) in Header &  longurl and redirect type in json file  
+response- json file
+
+
+c)to get the statistics for account manoj
+url - http://localhost:9595/shorturl/statistic/manoj - 
+http method - get
+request - Add Basic Authorization string (username:password) in Header
+response - json file
+
+
+d)Redirection for short url
+url - short url created in step b
+http method - get
+response - redirection to original url
